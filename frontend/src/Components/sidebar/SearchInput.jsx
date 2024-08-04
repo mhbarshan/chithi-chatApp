@@ -26,12 +26,12 @@ const SearchInput = () => {
   }
   return (
     <form onSubmit={handleSubmit} className="flex  items-center gap-2">
-        <input type="text" placeholder="Search the khoj" className="input input-bordered rounded-full" 
+        <input type="text" placeholder="Search the khoj" className="input input-bordered searchBar-responsive rounded-full" 
         value={search}
         onChange={(e)=> setSearch(e.target.value)}
         />
-        <button type="submit" className="btn btn-circle bg-teal-600 text-white">
-           <IoSearchSharp className="w-6 h-6 outline-none"/>
+        <button type="submit" className="btn btn-circle  bg-teal-600 text-white">
+           <IoSearchSharp className=" searchButton-responsive w-6 h-6 outline-none"/>
         </button>
     </form>
   )

@@ -57,3 +57,34 @@ body{
 		transform: translate3d(4px, 0, 0);
 	}
 }
+
+.sidebar-responsive {
+	width: 100%;
+  }
+  
+  @media (max-width: 640px) {
+	.sidebar-responsive {
+	  width: 25%;
+	}
+  }
+
+  .searchBar-responsive {
+	width: 100%;
+  }
+  
+  @media (max-width: 640px) {
+	.searchBar-responsive {
+	  width: 80%;
+	}
+  }
+  .searchButton-responsive {
+	/* height: 24px; */
+	/* width: 24px; */
+  }
+  
+  @media (max-width: 640px) {
+	.searchButton-responsive {
+		/* height: 10px; */
+		width: 40%;
+	}
+  }
