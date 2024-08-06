@@ -5,6 +5,8 @@ import toast from "react-hot-toast"
 
 const useGetMessages = () => {
   const [loading, setLoading] = useState(false)
+  const [receiverIdCompare, setReceiverIdCompare] = useState('')
+
   const {messages,setMessages,selectedConversation} = useConversation()
   
 
@@ -18,6 +20,7 @@ const useGetMessages = () => {
         //    console.log(data)
            if(data.error) throw new Error(data.error)
             setMessages(data)
+           setReceiverIdCompare(selectedConversation._id)
         } catch (error) {
             toast.error(error.message)
         } finally{
@@ -27,7 +30,7 @@ const useGetMessages = () => {
     if(selectedConversation?._id) getMessages()
   },[selectedConversation?._id,setMessages])
 
-  return {loading,messages}
+  return {loading,messages,receiverIdCompare}
 }
 
 export default useGetMessages
