@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef} from "react"
 import useGetMessages from "../../hooks/useGetMessages"
 import MessageSkeleton from "../skeleton/MessageSkeleton"
 import Message from "./Message"
@@ -21,6 +21,8 @@ const Messages = () => {
   const {socket} = useSocketContext()
   const {setMessages} = useConversation()
   const {conversations} = useGetConversation()
+  
+
   useEffect(()=>{
     socket?.on("newMessage",(newMessage)=>{
         newMessage.shouldShake=true
@@ -89,7 +91,7 @@ const Messages = () => {
     return ()=>socket.off("newMessage")
 },[socket,setMessages,messages,receiverIdCompare])
 
-
+   
   // useListenMessages(receiverIdCompare) 
   const lastMessageRef =useRef()
   useEffect(() => {

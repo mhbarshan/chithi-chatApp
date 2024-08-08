@@ -20,6 +20,7 @@ const useListenMessages = (receiverIdCompare) => {
             // setMessages([...messages,newMessage])
             }else{
                 console.log("Dont mar")
+                
             }
         })
         // const off =
