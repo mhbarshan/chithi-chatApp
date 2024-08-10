@@ -44,7 +44,7 @@ const Signup = () => {
       data.append("cloud_name", "barshan");
       const uploadPic = axios
         .post(
-          "https://cors-anywhere.herokuapp.com/https://api.cloudinary.com/v1_1/barshan/image/upload",
+          "https://api.cloudinary.com/v1_1/barshan/image/upload",
           data
         )
         .then((res) => {
